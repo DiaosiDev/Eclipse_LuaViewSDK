@@ -1,6 +1,5 @@
 package com.taobao.luaview.util;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
@@ -201,7 +200,7 @@ public class TextUtil {
         return layout.getLineCount();
     }
 
-    @SuppressLint("NewApi") private static int getMaxLines(TextView view) {
+    private static int getMaxLines(TextView view) {
         int maxLines = -1; // No limit (Integer.MAX_VALUE also means no limit)
 
         TransformationMethod method = view.getTransformationMethod();

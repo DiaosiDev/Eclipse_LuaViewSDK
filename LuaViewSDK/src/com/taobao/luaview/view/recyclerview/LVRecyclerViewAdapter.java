@@ -1,6 +1,5 @@
 package com.taobao.luaview.view.recyclerview;
 
-import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,7 @@ import org.luaj.vm2.Globals;
  * @author song
  * @date 15/11/30
  */
-@SuppressLint("WrongCall") public class LVRecyclerViewAdapter extends RecyclerView.Adapter<LVRecyclerViewHolder> {
+public class LVRecyclerViewAdapter extends RecyclerView.Adapter<LVRecyclerViewHolder> {
 
     private UDBaseRecyclerView mLuaUserData;
     private Globals mGlobals;

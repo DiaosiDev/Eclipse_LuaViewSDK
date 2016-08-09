@@ -1,7 +1,6 @@
 package com.taobao.luaview.userdata.ui;
 
 import android.animation.Animator;
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -209,7 +208,7 @@ public class UDView<T extends View> extends BaseUserdata {
      *
      * @return
      */
-    @SuppressLint("NewApi") public int getBackgroundColor() {
+    public int getBackgroundColor() {
         final View view = getView();
         if (view != null) {
             final Drawable drawable = view.getBackground();
@@ -230,7 +229,7 @@ public class UDView<T extends View> extends BaseUserdata {
         return this;
     }
 
-    @SuppressLint("NewApi") public float getCornerRadius() {
+    public float getCornerRadius() {
         final T view = getView();
         if (view != null) {
             return view.getBackground() instanceof LVGradientDrawable ? ((LVGradientDrawable) view.getBackground()).getCornerRadius() : 0;
@@ -594,7 +593,7 @@ public class UDView<T extends View> extends BaseUserdata {
      *
      * @param picName String
      */
-    @SuppressLint("NewApi") public UDView setBackgroundResource(String picName) {
+    public UDView setBackgroundResource(String picName) {
         final View view = getView();
         if (view != null) {
             if (getLuaResourceFinder() != null) {

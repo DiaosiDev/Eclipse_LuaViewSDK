@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
-import android.annotation.SuppressLint;
 import android.os.Build;
 import android.text.TextUtils;
 import android.view.animation.Interpolator;
@@ -49,7 +48,7 @@ public class UDAnimator extends BaseUserdata {
         return (ObjectAnimator) userdata();
     }
 
-    @SuppressLint("NewApi") private void init() {
+    private void init() {
         final ObjectAnimator animator = getAnimator();
         if (animator != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
@@ -369,7 +368,7 @@ public class UDAnimator extends BaseUserdata {
      *
      * @return
      */
-    @SuppressLint("NewApi") public Animator build() {
+    public Animator build() {
         //这种方式clone出来的animator不能重复播放
         /*final ObjectAnimator result = getAnimator().clone();//克隆一份
         setupListeners(result);
@@ -428,7 +427,7 @@ public class UDAnimator extends BaseUserdata {
         }
     }
 
-    @SuppressLint("NewApi") private void addOnPauseListener(ObjectAnimator animator) {
+    private void addOnPauseListener(ObjectAnimator animator) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (animator != null && (mOnPauseCallback != null || mOnResumeCallback != null)) {
                 animator.addPauseListener(new Animator.AnimatorPauseListener() {

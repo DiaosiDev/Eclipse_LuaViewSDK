@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.annotation.SuppressLint;
 import android.os.Build;
 import android.text.TextUtils;
 import android.view.animation.Interpolator;
@@ -54,7 +53,7 @@ public class UDAnimatorSet extends BaseUserdata {
         mAnimators = new ArrayList<Animator>();
     }
 
-    @SuppressLint("NewApi") private ObjectAnimator createAnimator() {
+    private ObjectAnimator createAnimator() {
         final ObjectAnimator animator = new ObjectAnimator();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
             animator.setAutoCancel(true);
@@ -287,7 +286,7 @@ public class UDAnimatorSet extends BaseUserdata {
      *
      * @return
      */
-    @SuppressLint("NewApi") public UDAnimatorSet pause() {
+    public UDAnimatorSet pause() {
         final AnimatorSet animatorSet = getAnimatorSet();
         if (animatorSet != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -308,7 +307,7 @@ public class UDAnimatorSet extends BaseUserdata {
      *
      * @return
      */
-    @SuppressLint("NewApi") public UDAnimatorSet resume() {
+    public UDAnimatorSet resume() {
         final AnimatorSet animatorSet = getAnimatorSet();
         if (animatorSet != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -409,7 +408,7 @@ public class UDAnimatorSet extends BaseUserdata {
         }
     }
 
-    @SuppressLint("NewApi") private void addOnPauseListener(Animator animator) {
+    private void addOnPauseListener(Animator animator) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (animator != null && (mOnPauseCallback != null || mOnResumeCallback != null)) {
                 animator.addPauseListener(new Animator.AnimatorPauseListener() {

@@ -1,7 +1,6 @@
 package com.taobao.luaview.util;
 
 import android.animation.Animator;
-import android.annotation.SuppressLint;
 import android.os.Build;
 
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.List;
  * @author song
  * @date 15/9/8
  */
-@SuppressLint("NewApi") public class AnimatorUtil {
+public class AnimatorUtil {
 
     /**
      * 启动所有

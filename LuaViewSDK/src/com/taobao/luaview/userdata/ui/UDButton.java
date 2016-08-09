@@ -1,6 +1,5 @@
 package com.taobao.luaview.userdata.ui;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
@@ -67,7 +66,7 @@ public class UDButton extends UDTextView<Button> {
         final Button btn = getView();
         if (btn != null && getContext() != null) {
             ImageUtil.fetch(getContext(), getLuaResourceFinder(), new String[]{normalImage, pressedImage}, new ImageUtil.LoadCallback() {
-                @SuppressLint("NewApi") @Override
+                @Override
                 public void onLoadResult(Map<String, Drawable> drawables) {
                     if (drawables != null) {
                         final StateListDrawable stateListDrawable = new StateListDrawable();

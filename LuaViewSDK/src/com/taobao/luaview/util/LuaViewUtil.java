@@ -1,6 +1,5 @@
 package com.taobao.luaview.util;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
@@ -27,7 +26,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author song
  * @date 15/9/21
  */
-@SuppressLint("NewApi") public class LuaViewUtil {
+public class LuaViewUtil {
 
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
 
@@ -92,8 +91,8 @@ import java.util.concurrent.atomic.AtomicInteger;
      * @return
      */
     public static ActionBar getActionBar(Globals globals) {
-        if (globals != null && globals.context instanceof Activity) {
-            return ((Activity) (globals.context)).getActionBar();
+        if (globals != null && globals.getContext() instanceof Activity) {
+            return ((Activity) (globals.getContext())).getActionBar();
         }
         return null;
     }
